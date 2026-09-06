@@ -1,4 +1,5 @@
-import com.example.expensemate.*;
+import dev.expensemate.model.*;
+import dev.expensemate.domain.*;
 import java.math.BigDecimal;
 import java.util.*;
 

@@ -1,4 +1,6 @@
-package com.example.expensemate
+package dev.expensemate.domain
+
+
 
 data class TagPriority(
     val tag: String,

@@ -1,18 +1,11 @@
-package com.example.expensemate
+package dev.expensemate.data
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import dev.expensemate.model.Expense
 import java.math.BigDecimal
-
-data class Expense(
-    val id: Long,
-    val amountCents: Long,
-    val tags: List<String>,
-    val detail: String,
-    val createdAtMillis: Long
-)
 
 class ExpenseDatabase(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
     override fun onCreate(db: SQLiteDatabase) {

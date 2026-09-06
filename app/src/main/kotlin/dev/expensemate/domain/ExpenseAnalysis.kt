@@ -1,5 +1,6 @@
-package com.example.expensemate
+package dev.expensemate.domain
 
+import dev.expensemate.model.Expense
 import java.math.BigDecimal
 import java.text.SimpleDateFormat
 import java.util.Calendar
