@@ -35,12 +35,17 @@ class ExpenseDatabase(context: Context) : SQLiteOpenHelper(context, DB_NAME, nul
         onCreate(db)
     }
 
-    fun insert(amount: BigDecimal, tags: List<String>, detail: String): Long {
+    fun insert(
+        amount: BigDecimal,
+        tags: List<String>,
+        detail: String,
+        createdAtMillis: Long = System.currentTimeMillis()
+    ): Long {
         val values = ContentValues().apply {
             put("amount_cents", amount.movePointRight(2).setScale(0).longValueExact())
             put("tags", tags.joinToString(TAG_SEPARATOR))
             put("detail", detail)
-            put("created_at_millis", System.currentTimeMillis())
+            put("created_at_millis", createdAtMillis)
         }
         return writableDatabase.insert("expenses", null, values)
     }

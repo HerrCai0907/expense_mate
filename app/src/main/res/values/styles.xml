@@ -7,4 +7,14 @@
         <item name="android:navigationBarColor">@color/blue_dark</item>
         <item name="android:colorAccent">@color/orange_accent</item>
     </style>
+
+    <style name="AppDialogLight" parent="android:style/Theme.Material.Light.Dialog.Alert">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">@color/black_primary</item>
+    </style>
+
+    <style name="AppDialogDark" parent="android:style/Theme.Material.Dialog.Alert">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">@color/white_primary</item>
+    </style>
 </resources>
